@@ -138,6 +138,15 @@ namespace TopDownShooter
             //this is for normal movement
             Horizontal = PlayerController.GetHorizontalValue();
             Vertical = PlayerController.GetVerticalValue();
+            if(Horizontal !=0 || Vertical != 0)
+            {
+                AnimatorController.isRunning = true;
+            }
+            if (Horizontal == 0 && Vertical == 0)
+            {
+                AnimatorController.isRunning = false;
+            }
+
 
             //this is for aim and shoot
             Horizontal2 = PlayerController.GetHorizontal2Value();

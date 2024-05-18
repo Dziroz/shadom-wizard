@@ -63,7 +63,16 @@ namespace TopDownShooter
 
         private void Update()
         {
-            
+            if(CurrentWeaponClass == Weapon.WeaponType.Pistol)
+            {
+                AnimatorController.isPistol = true;
+                AnimatorController.isRifle = false;
+            }
+            if(CurrentWeaponClass == Weapon.WeaponType.Rifle)
+            {
+                AnimatorController.isRifle = true;
+                AnimatorController.isPistol = false;
+            }
             //input for dop weapon
             _dropWeapon = PlayerController.GetDropWeaponValue();
             //input for reload 
@@ -122,11 +131,11 @@ namespace TopDownShooter
                             case Weapon.WeaponType.Hands:
                                 break;
                             case Weapon.WeaponType.Rifle:
-                                _cameraShake.Shaker(10, 10);
+                                _cameraShake.Shaker(3, 3, 0.1f);
                                 _sounds.Sound(0);
                                 break;
                             case Weapon.WeaponType.Pistol:
-                                _cameraShake.Shaker(3, 3);
+                                _cameraShake.Shaker(3, 3, 0.2f) ;
                                 _sounds.Sound(1);
                                 break;
                             case Weapon.WeaponType.Melee:
@@ -161,6 +170,7 @@ namespace TopDownShooter
             
             //play shoot animation
             ShotAnimation();
+            AnimatorController.isShooting = true;
             //instantiate bullet and set speed, direction and damage.
             var bullet = Instantiate(WeaponData.Weapons[CurrentDbWeaponIndex].Bullet, BulletPoint.position,
                 transform.rotation).GetComponent<Damage>();

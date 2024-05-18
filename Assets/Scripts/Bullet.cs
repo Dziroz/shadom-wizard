@@ -20,6 +20,7 @@ public class Bullet : MonoBehaviour
     }
     private void FixedUpdate()
     {
+
         rb.AddForce(direction*power);
     }
 

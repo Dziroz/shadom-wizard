@@ -58,6 +58,7 @@ namespace TopDownShooter
             }
 
             return Input.GetAxis("Vertical");
+
         }
 
         public float GetHorizontal2Value()

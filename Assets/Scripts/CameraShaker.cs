@@ -11,17 +11,17 @@ public class CameraShaker : MonoBehaviour
     {
 
     }
-    IEnumerator Shake(float Amplitude, float Frequency)
+    IEnumerator Shake(float Amplitude, float Frequency, float time)
     {
         vCamera.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_AmplitudeGain = Amplitude;
         vCamera.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_FrequencyGain = Frequency;
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(time);
         vCamera.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_AmplitudeGain = 0;
         vCamera.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_FrequencyGain = 0;
     }
-    public void Shaker(float Amplitude, float Frequency)
+    public void Shaker(float Amplitude, float Frequency, float time)
     {
-        StartCoroutine(Shake(Amplitude, Frequency));
+        StartCoroutine(Shake(Amplitude, Frequency, time));
     }
     
 }
