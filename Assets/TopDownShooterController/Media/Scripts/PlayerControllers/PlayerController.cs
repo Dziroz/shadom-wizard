@@ -40,7 +40,6 @@ namespace TopDownShooter
 
             CheckForVirtualJoystick();
         }
-
         public float GetHorizontalValue()
         {
             if (UseVirtualJoyStick)

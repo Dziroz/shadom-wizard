@@ -8,13 +8,16 @@ using Random = UnityEngine.Random;
 
 namespace TopDownShooter
 {
+    
     public class HitPoint : MonoBehaviour
     {
+        public GameObject Batya;
         public float MaxHitPoint = 100;
         public float CurrentHitPoint = 0;
 
         [Header("PopUpText Settings")] [Tooltip("PopUpText prefab")]
         public GameObject PopUpPrefab;
+
 
         [Tooltip("PopUpText Color")] public Color PopUpTextColor = Color.red;
         [Tooltip("PopUpText fade time")] public float FadeTime = 0.5f;
@@ -28,6 +31,7 @@ namespace TopDownShooter
         {
             CurrentHitPoint = MaxHitPoint;
         }
+
 
         public void ApplyDamage(float amount)
         {
@@ -72,10 +76,17 @@ namespace TopDownShooter
             poPupText.transform.GetChild(0).GetComponent<TextMesh>().color = PopUpTextColor;
         }
 
-        private void Dead()
+        public void Dead()
         {
             //you can add dead animation on this place
-            Destroy(gameObject, 0);
+            StopAllCoroutines();
+            int i = 0;
+            while (i < 1500) { i++; }
+            if (i >= 1500)
+            {
+                Destroy(Batya, 0);
+                kile.punch = false;
+            }
         }
 
         //use this for collision bullets

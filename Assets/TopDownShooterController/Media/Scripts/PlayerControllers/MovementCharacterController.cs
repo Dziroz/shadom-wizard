@@ -131,7 +131,7 @@ namespace TopDownShooter
             _dashColdown = DashColdown;
             _gravity = Gravity;
         }
-
+  
         private void Update()
         {
             //capture input from direct input
