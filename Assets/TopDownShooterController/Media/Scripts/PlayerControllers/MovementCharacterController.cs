@@ -6,6 +6,7 @@ namespace TopDownShooter
 {
     public class MovementCharacterController : MonoBehaviour
     {
+        public CameraShaker _cameraShake;
         [Header("Player Controller Settings")] [Tooltip("Speed for the player.")]
         public float RunningSpeed = 5f;
 
@@ -217,6 +218,9 @@ namespace TopDownShooter
 
         private void FixedUpdate()
         {
+            if (_shooting)
+            {
+            }
             if (_activeFall)
             {
                 if (!_controller.isGrounded && !PlayerController.SwimmingController.Swimming)
@@ -252,6 +256,7 @@ namespace TopDownShooter
                 if (_shooting)
                 {
                     _controller.Move(Time.deltaTime * RunningSpeed * RunningShootSpeed * _move);
+                    
                 }
                 else
                 {

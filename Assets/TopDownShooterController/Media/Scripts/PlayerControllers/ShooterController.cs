@@ -7,6 +7,9 @@ namespace TopDownShooter
 {
     public class ShooterController : MonoBehaviour
     {
+
+        public CameraShaker _cameraShake;
+        public Sounds _sounds;
         [Header("Start weapon")]
         [Tooltip("This is the index to load weapons from WeaponData when start, -1 don't load any weapon")]
         public int StartWeaponIndex;
@@ -54,6 +57,8 @@ namespace TopDownShooter
         private void Start()
         {
             StarterWeapon(StartWeaponIndex);
+            
+
         }
 
         private void Update()
@@ -110,6 +115,28 @@ namespace TopDownShooter
                     else
                     {
                         Shoot();
+                        
+                        switch (CurrentWeaponClass)
+                        {
+                            case Weapon.WeaponType.Hands:
+                                break;
+                            case Weapon.WeaponType.Rifle:
+                                _cameraShake.Shaker(10, 10);
+                                _sounds.Sound(0);
+                                break;
+                            case Weapon.WeaponType.Pistol:
+                                _cameraShake.Shaker(3, 3);
+                                _sounds.Sound(1);
+                                break;
+                            case Weapon.WeaponType.Melee:
+                                break;
+                            case Weapon.WeaponType.TrowItem:
+                                break;
+                            default:
+                                break;
+                        }
+                        
+
                     }
                 }
                 else
@@ -130,11 +157,13 @@ namespace TopDownShooter
         //shoot bullet
         private void Shoot()
         {
+            
             //play shoot animation
             ShotAnimation();
             //instantiate bullet and set speed, direction and damage.
             var bullet = Instantiate(WeaponData.Weapons[CurrentDbWeaponIndex].Bullet, BulletPoint.position,
                 transform.rotation).GetComponent<Damage>();
+
             //muzzle effect
             if (WeaponData.Weapons[CurrentDbWeaponIndex].MuzzleEffect)
             {

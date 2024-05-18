@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 
+
 /* Script to easy setup your own input configurations.
  * You can use the virtual joystick solution in this pack or use another solution.
  * Note: if you go to use joystick like a Xbox controller you need add this two
