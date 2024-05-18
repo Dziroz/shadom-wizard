@@ -1,36 +1,68 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-[RequireComponent(typeof(NavMeshAgent))]
-public class EnemyMovement : MonoBehaviour
+public class AI_Monster : MonoBehaviour
 {
-    public Transform Player;
-    public float UpdateRate = 0.1f;
-    private NavMeshAgent Agent;
+    public bool Shoting;
+    private NavMeshAgent AI_Agent;
+    private GameObject Player;
+    public GameObject Panel_GaveOver;
+    public float speed;
+    public GameObject bulletPrefab;
+    public GameObject bulletPoint;
+    public float timer;
 
-    private void Awake()
+    public float rotationModifier;
+
+    void Start()
     {
-        Agent = GetComponent<NavMeshAgent>();
+        AI_Agent = gameObject.GetComponent<NavMeshAgent>();
+        Player = GameObject.FindGameObjectWithTag("Player");
     }
-
-    private void Start()
+    private void Update()
     {
-        StartCoroutine(FollowTarget());
+        timer += Time.deltaTime;
     }
-
-    private IEnumerator FollowTarget()
+    void FixedUpdate()
     {
-        WaitForSeconds Wait = new WaitForSeconds(UpdateRate);
-
-        while (enabled)
+        
+        AI_Agent.SetDestination(Player.transform.position);
+        float Dist_Player = Vector3.Distance(Player.transform.position, gameObject.transform.position);
+        if (Shoting)
         {
-            if(Vector3.Distance(this.transform.position, Player.transform.position) > 1)
+            if(Dist_Player < 10)
             {
-                Agent.SetDestination(Player.transform.position);
+                AI_Agent.speed = 0.1f;
+                Shoot();
                 
             }
-            yield return Wait;
+            else
+            {
+                AI_Agent.speed = 3.5f;
+            }
         }
+        else
+        {
+            if (Dist_Player < 1)
+            {
+                AI_Agent.SetDestination(transform.position);
+            }
+        }
+
+        
+
+
     }
+    void Shoot()
+    {
+        if (timer > 1)
+        {
+            Instantiate(bulletPrefab, bulletPoint.transform);
+            timer = 0;
+        }
+
+    }
+    
 }

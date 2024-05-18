@@ -63,6 +63,7 @@ namespace TopDownShooter
 
         private void Update()
         {
+            
             //input for dop weapon
             _dropWeapon = PlayerController.GetDropWeaponValue();
             //input for reload 
