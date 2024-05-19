@@ -7,6 +7,7 @@ public class MonsterAnimator : MonoBehaviour
     public Animator anim;
     private GameObject Player;
     public float Dist_Player;
+    public float distattack;
 
 
     void Start()
@@ -19,7 +20,7 @@ public class MonsterAnimator : MonoBehaviour
     void Update()
     {
         Dist_Player = Vector3.Distance(Player.transform.position, gameObject.transform.position);
-        if (Dist_Player < 2)
+        if (Dist_Player < distattack)
         {
             anim.SetBool("isAttack", true);
         }
