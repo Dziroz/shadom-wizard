@@ -4,5 +4,17 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/OLEG.unity
+    guid: 065b5bffcdbdb6141802a8e44f3949bd
+  - enabled: 1
+    path: Assets/Scenes/PLATON.unity
+    guid: 7da59e2adff8fa7428180d93f8cc1720
+  - enabled: 1
+    path: Assets/Scenes/MAINLEVEL.unity
+    guid: 4f42139578cd6ba429945764df70bc41
+  - enabled: 1
+    path: Assets/Scenes/END.unity
+    guid: 6661ebe0d2ea33340824e6b389e3ef2b
   m_configObjects: {}

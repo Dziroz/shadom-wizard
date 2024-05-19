@@ -23,7 +23,7 @@ namespace TopDownShooter
         {
             if(HP <= 0)
             {
-                //SceneManager.LoadScene();
+                SceneManager.LoadScene(3);
             }
         }
         private void OnTriggerEnter(Collider other)

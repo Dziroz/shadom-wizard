@@ -43,6 +43,7 @@ public class Bulet : MonoBehaviour
     public float power;
     void Start()
     {
+        Destroy(this.gameObject, 15f);
         direction = dirdot.transform.position - transform.position;
     }
 
