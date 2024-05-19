@@ -13,10 +13,10 @@ public class anim_kil : MonoBehaviour
         PlayerCam.fieldOfView = 30;
         anime.SetBool("livin", true);
         anime.Play("mixamo_com");
-        Invoke("schoolShoot", 1f);
+        Invoke("go", 1f);
         PlayerCam.transform.position -= vr;
     }
-    public void schoolShoot()
+    public void go()
     {
         PlayerCam.transform.position += vr;
         anime.SetBool("livin", false);
