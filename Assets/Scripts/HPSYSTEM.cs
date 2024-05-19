@@ -2,12 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-
+using UnityEngine.SceneManagement;
 public class HPSYSTEM : MonoBehaviour
 {
     static public int hp;
     static public float timera;
     public TextMeshProUGUI hptext;
+    public int x;
 
     
     void Start()
@@ -18,6 +19,10 @@ public class HPSYSTEM : MonoBehaviour
 
     void Update()
     {
+        if(hp <= 0)
+        {
+            SceneManager.LoadScene(x);
+        }
         timera += Time.deltaTime;
         hptext.text = hp.ToString();
     }

@@ -17251,6 +17251,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hptext: {fileID: 1217357644}
+  x: 2
 --- !u!65 &1337674625
 BoxCollider:
   m_ObjectHideFlags: 0
