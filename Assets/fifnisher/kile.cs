@@ -14,6 +14,8 @@ public class kile : MonoBehaviour
     static public bool punch = false;
     void Start()
     {
+        // Drunk_Run_Forward_1
+        animationkill = GameObject.Find("Drunk_Run_Forward_1").GetComponent<anim_kil>();
         enemy = transform.parent.GetComponent<AI_Monster>();
         killbutt.SetActive(false);
 

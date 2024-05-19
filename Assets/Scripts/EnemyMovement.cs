@@ -60,7 +60,7 @@ public class AI_Monster : MonoBehaviour
     {
         if (timer > 1)
         {
-            Instantiate(bulletPrefab, bulletPoint.transform);
+            Instantiate(bulletPrefab, bulletPoint.transform.position, Quaternion.identity);
             timer = 0;
         }
 
