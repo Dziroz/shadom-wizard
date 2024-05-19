@@ -23,6 +23,12 @@ public class MonsterAnimator : MonoBehaviour
         if (Dist_Player < distattack)
         {
             anim.SetBool("isAttack", true);
+            if(HPSYSTEM.timera > 1.5f)
+            {
+                HPSYSTEM.hp--;
+                HPSYSTEM.timera = 0;
+
+            }
         }
         else
         {
