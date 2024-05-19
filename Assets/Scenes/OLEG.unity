@@ -15061,6 +15061,30 @@ MonoBehaviour:
   audio:
   - {fileID: 8300000, guid: 50b68b2046a7d664a9b082cbb76b561f, type: 3}
   - {fileID: 8300000, guid: 6514bc3487854fb42873fb947d6a5557, type: 3}
+  stepsAudio:
+  - {fileID: 8300000, guid: 666b9ae81890fc34d9975ae9b4a8401f, type: 3}
+  - {fileID: 8300000, guid: 2b099d1f12f298f45ae16be9e8bebd16, type: 3}
+  - {fileID: 8300000, guid: 09f6754aa4798be4389808d4aceb03ab, type: 3}
+  - {fileID: 8300000, guid: 1636b7a3c203b38429d17c5dbcd36a08, type: 3}
+  - {fileID: 8300000, guid: 5e958b157e0757f4685789751170c400, type: 3}
+  - {fileID: 8300000, guid: fb33472e7313b1d418ddb91a4aa12137, type: 3}
+  - {fileID: 8300000, guid: 9ed2cc205d9d57049ac1efa0d3893834, type: 3}
+  - {fileID: 8300000, guid: cd850d50032707941967a2d50be9ee5a, type: 3}
+  - {fileID: 8300000, guid: 684e85de1f90cf844b1afbd87e3f6170, type: 3}
+  - {fileID: 8300000, guid: b358cc0e2b42e694f9ba6a43c4dc36fa, type: 3}
+  - {fileID: 8300000, guid: 6b139a8b94842e84484373c70364c243, type: 3}
+  - {fileID: 8300000, guid: 0e84242cb6694bc48beef1723b477f17, type: 3}
+  - {fileID: 8300000, guid: 4206b9e786413fd4984ee076384e2cdb, type: 3}
+  - {fileID: 8300000, guid: 18b60346c37e3e7428e237647e487d12, type: 3}
+  - {fileID: 8300000, guid: 2e9da8382182be64187b7157db241abd, type: 3}
+  - {fileID: 8300000, guid: 12ff966219845354988c2c2550492fed, type: 3}
+  - {fileID: 8300000, guid: dc5d5b6e7210ab346a9c0e2c9bfdf955, type: 3}
+  - {fileID: 8300000, guid: 5b077241a3302c74abdfd3149b185c37, type: 3}
+  - {fileID: 8300000, guid: 5df9a4ac68f09554f93eda449f2e2648, type: 3}
+  - {fileID: 8300000, guid: 414bc37db3b2abf43b4b982f50ba07f4, type: 3}
+  - {fileID: 8300000, guid: 19185d55843eba84bb326d48c7cf5c98, type: 3}
+  - {fileID: 8300000, guid: 639c72701d193634c9d442de5c84c88f, type: 3}
+  x: 0
 --- !u!1 &1646789813
 GameObject:
   m_ObjectHideFlags: 0
@@ -19875,6 +19899,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: STRELYAT
       objectReference: {fileID: 0}
+    - target: {fileID: 1370575773505254747, guid: f1a48f8edc2b0674a82502e491ffe7dc, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8121671937229449830, guid: f1a48f8edc2b0674a82502e491ffe7dc, type: 3}
       propertyPath: m_LocalPosition.x
       value: -30.2
@@ -19967,6 +19995,10 @@ PrefabInstance:
     - target: {fileID: 1383683461497742498, guid: 14e892d0fbd3cf44dae3fd0051552941, type: 3}
       propertyPath: m_Name
       value: OBICNII
+      objectReference: {fileID: 0}
+    - target: {fileID: 1383683461497742498, guid: 14e892d0fbd3cf44dae3fd0051552941, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1599508487959540994, guid: 14e892d0fbd3cf44dae3fd0051552941, type: 3}
       propertyPath: animationkill
