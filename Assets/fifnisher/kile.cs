@@ -32,7 +32,7 @@ public class kile : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag =="Player" && hp.GetComponent<HitPoint>().CurrentHitPoint <= hp.GetComponent<HitPoint>().MaxHitPoint * 0.15f)
+        if (other.gameObject.tag =="Player" && hp.GetComponent<HitPoint>().CurrentHitPoint <= hp.GetComponent<HitPoint>().MaxHitPoint * 0.5f)
         {
             CanBeFinished = true;
             killbutt.SetActive(true);
