@@ -801,7 +801,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Batya: {fileID: 1383683461497742498}
-  MaxHitPoint: 100
+  MaxHitPoint: 30
   CurrentHitPoint: 10
   PopUpPrefab: {fileID: 1156348031185224, guid: 2ceac868d1282cc48bb98d72fb84f343, type: 3}
   PopUpTextColor: {r: 1, g: 1, b: 1, a: 1}
