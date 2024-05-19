@@ -85,7 +85,6 @@ namespace TopDownShooter
             if (i >= 1500)
             {
                 Destroy(Batya, 0);
-                kile.punch = false;
             }
         }
 

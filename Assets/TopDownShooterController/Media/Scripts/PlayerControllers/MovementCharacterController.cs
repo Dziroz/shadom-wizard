@@ -279,6 +279,7 @@ namespace TopDownShooter
             //set the forward direction if have some weapons loaded
             if (PlayerController.ShooterController.CurrentWeaponClass != Weapon.WeaponType.Hands)
             {
+
                 //check if the player is using the mouse to rotate and shoot
                 if (PlayerController.UseMouseToRotate)
                 {
@@ -291,7 +292,9 @@ namespace TopDownShooter
                 }
                 else
                 {
+
                     _direction = (Horizontal2 * _right + Vertical2 * _forward);
+
                 }
             }
             else
@@ -309,6 +312,7 @@ namespace TopDownShooter
                 if (_move != Vector3.zero && PlayerController.ShooterController.DelayToTurnOn <= 0)
                 {
                     _shooting = false;
+
                     transform.forward = Vector3.Lerp(transform.forward, _move, 0.5f);
                 }
             }

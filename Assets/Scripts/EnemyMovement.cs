@@ -13,6 +13,7 @@ public class AI_Monster : MonoBehaviour
     public GameObject bulletPrefab;
     public GameObject bulletPoint;
     public float timer;
+    public float Dist_Player;
 
     public float rotationModifier;
 
@@ -29,7 +30,7 @@ public class AI_Monster : MonoBehaviour
     {
         
         AI_Agent.SetDestination(Player.transform.position);
-        float Dist_Player = Vector3.Distance(Player.transform.position, gameObject.transform.position);
+        Dist_Player = Vector3.Distance(Player.transform.position, gameObject.transform.position);
         if (Shoting)
         {
             if(Dist_Player < 10)
@@ -45,7 +46,7 @@ public class AI_Monster : MonoBehaviour
         }
         else
         {
-            if (Dist_Player < 1)
+            if (Dist_Player < 2)
             {
                 AI_Agent.SetDestination(transform.position);
             }
