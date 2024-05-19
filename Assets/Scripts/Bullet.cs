@@ -10,6 +10,7 @@ public class Bullet : MonoBehaviour
     public float power;
     void Start()
     {
+        Destroy(gameObject, 5);
         Player = GameObject.FindGameObjectWithTag("Player");
         direction = Player.transform.position-transform.position;
     }
